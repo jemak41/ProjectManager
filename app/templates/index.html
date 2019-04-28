@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<body class="body">
+
+    <div class="container" id="container" style="width:100%;">
+        <div id="left" style="float:left;
+    width:45%;">
+            <h2>{{ active_projects }} Active Project(s) <font color="red"> ({{ onhold_projects }} On-Hold)</font></h2>
+        </div>
+        <div id="right" style="float:right;
+        width:45%;">
+            <h2>{{ completed_projects }} Completed Project(s)</h2>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="container" align="left">
+        <embed id="emb" type="image/svg+xml" src={{line_chart_data|safe}} style="max-width:750px"/>
+    </div>
+</body>
+{% endblock %}
+
+

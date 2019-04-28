@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <form class="form col-md-8" method="POST" role="form" action="">
+        {{ form.hidden_tag() }}
+        <p>{{ form.project_name.label }}: {{ form.project_name }}</p>
+        <p>{{ form.technology.label }}: {{ form.technology }}</p>
+        <p>{{ form.description.label }}:</p>
+        <p>{{ form.description(cols="55", rows="10") }}</p>
+        <p>{{ form.target_start_date.label }}: {{ form.target_start_date }}</p>
+        <p>{{ form.target_end_date.label }}: {{ form.target_end_date }}</p>
+        <p>{{ form.remarks.label }}:</p>
+        <p>{{ form.remarks(cols="55", rows="10") }}</p>
+        <br>
+        <p>{{ form.submit }}</p>
+    </form>
+
+{% endblock %}

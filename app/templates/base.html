@@ -1,0 +1,27 @@
+{% block title %}
+    <div class="container" style="width:100%;">
+        <div style="float:left; width:50%;">
+            <h1>
+                <a href="{{ url_for('index') }}">PROJECT MANAGER</a>
+            </h1>
+        </div>
+        <div align="right" style="float:right; width:50%;">
+            <h1>
+                <a href="{{ url_for('new') }}">New</a>
+                <a href="{{ url_for('editempty') }}">Edit</a>
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+        <div><font size="1" color="red">{{ message }}</font></div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+{% endblock %}
+
+{% block app_content %}{% endblock %}

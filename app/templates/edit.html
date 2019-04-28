@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <form class="form col-md-8" method="POST" role="form" action="">
+        {{ form.hidden_tag() }}
+        <p>{{ form.id.label }} {{ form.id }}</p>
+        <p>{{ form.project_name.label }} {{ form.project_name }}</p>
+        <p><font color="red" size="1">(1=Python, 2=Javascript, 3=Java, 4=PHP)</font></p>
+        <p>{{ form.technology.label }} {{ form.technology }}</p>
+        <p>{{ form.description.label }}</p>
+        <p>{{ form.description(cols="55", rows="10") }}</p>
+        <p><font color="red" size="1">(1=In-Progress, 2=Delayed, 3=Has Issues, 4=Completed, 5=On-Hold)</font></p>
+        <p>{{ form.status.label }} {{ form.status }}</p>
+        <p><font color="red" size="1">(1=Analysis, 2=Design, 3=Development, 4=Testing, 5=Maintenance)</font></p>
+        <p>{{ form.task.label }} {{ form.task }}</p>
+        <p>{{ form.target_start_date.label }} {{ form.target_start_date }}</p>
+        <p>{{ form.target_end_date.label }} {{ form.target_end_date }}</p>
+        <p>{{ form.actual_start_date.label }} {{ form.actual_start_date }}</p>
+        <p>{{ form.actual_end_date.label }} {{ form.actual_end_date }}</p>
+        <p>{{ form.remarks.label }}</p>
+        <p><font color="red" size="1">(e.g. jmsp 4/22: blah blah)</font></p>
+        <p>{{ form.remarks(cols="55", rows="10") }}</p>
+        <p>{{ form.submit }} {{ form.delete }}</p>
+    </form>
+
+{% endblock %}

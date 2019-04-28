@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <form class="form col-md-8" method="POST" role="form" action="">
+        {{ form.hidden_tag() }}
+        <p>Are you sure you want to delete "{{ project.project_name }}" Project?</p>
+        <p>{{ form.yes }} {{ form.no }}</p>
+    </form>
+
+{% endblock %}
